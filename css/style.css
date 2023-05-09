@@ -1,0 +1,135 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap");
+
+/* PRINCIPAL */
+
+:root {
+  --amarelo1: #ddb437;
+  --amarelo2: #bf9821;
+  --marrom1: #3b2507;
+  --marrom2: #734002;
+  --marrom3: #291904;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: var(--marrom3);
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+/* MENU */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--marrom3);
+  padding: 0.7em 0em;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  gap: 1em;
+  color: white;
+}
+
+.nav-link {
+  font-size: 0.7rem;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.6em 1em;
+  transition: 0.25s;
+}
+
+.nav-link:hover {
+  background-color: var(--marrom1);
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.13);
+}
+
+/* BACKGROUND */
+
+.bg {
+  background-image: url("../img/bg02.jpg");
+  background-size: cover;
+}
+
+.bg-02 {
+  background-image: url("../img/bg01.jpg");
+  height: 200px;
+}
+
+.bg-03 {
+  background-image: url("../img/bg03.jpg");
+  height: 200px;
+}
+
+/* HEADER */
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-container---title {
+    width: 90%;
+  font-family: "Merriweather", serif;
+  padding: 4em 0em;
+  text-align: center;
+}
+
+.header-container---title h1 {
+  font-family: "Merriweather", serif;
+  font-size: 2.75rem;
+  font-weight: 900;
+  color: var(--amarelo1);
+  text-shadow: 0px 0px 8px var(--marrom2), 0px 0px 8px var(--marrom2),
+    0px 0px 8px var(--marrom2), 0px 0px 8px var(--marrom2),
+    0px 0px 8px var(--marrom2);
+}
+
+.header-container---title p {
+  color: var(--amarelo1);
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-shadow: 0px 0px 5px var(--marrom2), 0px 0px 5px var(--marrom2),
+    0px 0px 5px var(--marrom2), 0px 0px 5px var(--marrom2),
+    0px 0px 5px var(--marrom2), 0px 0px 5px var(--marrom2),
+    0px 0px 5px var(--marrom2), 0px 0px 5px var(--marrom2);
+}
+
+/* MAIN */
+
+section {
+  box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.603);
+}
+
+article {
+  width: 90%;
+  padding: 6em 0em;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--marrom3);
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.7rem;
+  color: white;
+  width: 90%;
+  padding: 0.6em 1em;
+}
