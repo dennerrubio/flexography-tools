@@ -12,9 +12,9 @@
     <header>
       <nav>
         <ul>
-          <li><a href="#" class="nav-link">Orçamento</a></li>
-          <li><a href="#" class="nav-link">Calculadora</a></li>
-          <li><a href="#" class="nav-link">Cilindro</a></li>
+          <li><a href="#title1" class="nav-link">Orçamento</a></li>
+          <li><a href="#title2" class="nav-link">Calculadora</a></li>
+          <li><a href="#title3" class="nav-link">Cilindro</a></li>
         </ul>
       </nav>
       <div class="header-container bg">
@@ -27,8 +27,8 @@
     <main>
       <section>
         <article>
-          <h1 class="title">Orçamento</h1>
-          <p>
+          <h1 class="title" id="title1">Orçamento</h1>
+          <p class="title---subtext">
             Adicione os valores de largura e altura do serviço, um valor extra a
             ser adicionado na largura e altura (que pode ser zero caso não
             queira), o valor de fator e a quantidade de jogos desta peça. Ela
@@ -40,7 +40,7 @@
             ><input type="number" name="orc-larg" id="orc-larg" />
             <label for="orc-alt">Altura: </label
             ><input type="number" name="orc-alt" id="orc-alt" />
-            <label for="orc-add">Adicional: </label
+            <label for="orc-add">Extra: </label
             ><input type="number" name="orc-add" id="orc-add" />
             <label for="orc-fator">Fator: </label
             ><input type="number" name="orc-fator" id="orc-fator" />
@@ -48,7 +48,7 @@
             ><input type="number" name="orc-jogos" id="orc-jogos" />
             <input type="button" value="Enviar" id="orc-enviar" />
           </div>
-          <div>
+          <div class="container-inputs">
             <label for="orc-valor">Valor Adicional: </label
             ><input type="number" name="orc-valor" id="orc-valor" />
             <input type="button" value="Enviar" id="orc-enviar2" />
@@ -56,8 +56,8 @@
           <div id="container-array"><!--INFOPROARRAY--></div>
           <div>
             <input type="button" value="Finalizar" id="orc-finalizar" />
-            <input type="button" value="Excluir Último" id="orc-finalizar" />
-            <input type="button" value="Excluir Tudo" id="orc-finalizar" />
+            <input type="button" value="Excluir Último" id="orc-del-last" />
+            <input type="button" value="Excluir Tudo" id="orc-del" />
           </div>
           <div><!--RESULTADO--></div>
         </article>
@@ -65,27 +65,70 @@
       <div class="bg bg-02"><!--RESPIRO--></div>
       <section>
         <article>
-          <h1 class="title">Calculadora</h1>
-          <p>
+          <h1 class="title" id="title2">Calculadora</h1>
+          <p class="title---subtext">
             Possui as quatro operações matemáticas básicas e é possivel resetar
             os valores ou apenas apagar o último número digitado.
           </p>
+          <div id="calculadora">
+            <input type="text" name="calc-res" id="calc-res"  readonly="readonly">
+            <div class="calc-row">
+              <input type="button" value="C" class="calc-clear">
+              <input type="button" value="(" class="calc-num">
+              <input type="button" value=")" class="calc-num">
+              <input type="button" value="/" class="calc-num">
+            </div>
+            <div class="calc-row">
+              <input type="button" value="7" class="calc-num">
+              <input type="button" value="8" class="calc-num">
+              <input type="button" value="9" class="calc-num">
+              <input type="button" value="*" class="calc-num">
+            </div>
+            <div class="calc-row">
+              <input type="button" value="4" class="calc-num">
+              <input type="button" value="5" class="calc-num">
+              <input type="button" value="6" class="calc-num">
+              <input type="button" value="-" class="calc-num">
+            </div>
+            <div class="calc-row">
+              <input type="button" value="1" class="calc-num">
+              <input type="button" value="2" class="calc-num">
+              <input type="button" value="3" class="calc-num">
+              <input type="button" value="+" class="calc-num">
+            </div>
+            <div class="calc-row">
+              <input type="button" value="." class="calc-num">
+              <input type="button" value="0" class="calc-num">
+              <input type="button" value="<" class="calc-erase">
+              <input type="button" value="=" class="calc-eq">
+            </div>
+          </div>
         </article>
       </section>
       <div class="bg bg-03"><!--RESPIRO--></div>
       <section>
         <article>
-          <h1 class="title">Cilindro</h1>
-          <p>
+          <h1 class="title" id="title3">Cilindro</h1>
+          <p class="title---subtext">
             Adicione a largura da embalagem e a medida do cilindro, o resultado
             será a quantidade de repetições que cabem neste cilindro com a
             largura ideal da embalagem.
           </p>
+          <div class="container-inputs">
+            <label for="cil-larg">Largura: </label
+            ><input type="number" name="cil-larg" id="cil-larg" />
+            <label for="cil-value">Cilindro: </label
+            ><input type="number" name="cil-value" id="cil-value" />
+            <input type="button" value="Enviar" id="orc-enviar3" />
+          </div>
         </article>
       </section>
     </main>
     <footer>
-      <p>Desenvolvido por Denner Rubio, 2023. Acesse meu Github.</p>
+      <p>Desenvolvido por Denner Rubio, 2023. <a href="https://github.com/dennerrubio" target="_blank" id="footer-link">Acesse meu Github.</a></p>
     </footer>
+    <script src="js/orcamento.js"></script>
+    <script src="js/calculadora.js"></script>
+    <script src="js/cilindro.js"></script>
   </body>
 </html>
