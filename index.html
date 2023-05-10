@@ -1,51 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Flexography Tools</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#" class="nav-link">Orçamento</a></li>
-                <li><a href="#" class="nav-link">Calculadora</a></li>
-                <li><a href="#" class="nav-link">Cilindro</a></li>
-            </ul>
-        </nav>
-        <div class="header-container bg">
-            <div class="header-container---title">
-                <h1>Flexography Tools</h1>
-                <p>- Ferramentas para flexografia - </p>
-            </div>
+      <nav>
+        <ul>
+          <li><a href="#" class="nav-link">Orçamento</a></li>
+          <li><a href="#" class="nav-link">Calculadora</a></li>
+          <li><a href="#" class="nav-link">Cilindro</a></li>
+        </ul>
+      </nav>
+      <div class="header-container bg">
+        <div class="header-container---title">
+          <h1>Flexography Tools</h1>
+          <p>- Ferramentas para flexografia -</p>
         </div>
+      </div>
     </header>
     <main>
-        <section>
-            <article>
-                <h1>Orçamento</h1>
-                <p>Adicione os valores de largura e altura do serviço, um valor extra a ser adicionado na largura e altura (que pode ser zero caso não queira), o valor de fator e a quantidade de jogos desta peça. Ela será adicionada a lista, apenas todas as peças contabilizadas é só clicar para finalizar para obter o orçamento do serviço inteiro.</p>
-            </article>
-        </section>
-        <div class="bg bg-02"><!--RESPIRO--></div>
-        <section>
-            <article>
-                <h1>Calculadora</h1>
-                <p>Possui as quatro operações matemáticas básicas e é possivel resetar os valores ou apenas apagar o último número digitado.</p>
-            </article>
-        </section>
-        <div class="bg bg-03"><!--RESPIRO--></div>
-        <section>
-            <article>
-                <h1>Cilindro</h1>
-                <p>Adicione a largura da embalagem e a medida do cilindro, o resultado será a quantidade de repetições que cabem neste cilindro com a largura ideal da embalagem.</p>
-            </article>
-        </section>
+      <section>
+        <article>
+          <h1 class="title">Orçamento</h1>
+          <p>
+            Adicione os valores de largura e altura do serviço, um valor extra a
+            ser adicionado na largura e altura (que pode ser zero caso não
+            queira), o valor de fator e a quantidade de jogos desta peça. Ela
+            será adicionada a lista, apenas todas as peças contabilizadas é só
+            clicar para finalizar para obter o orçamento do serviço inteiro.
+          </p>
+          <div class="container-inputs">
+            <label for="orc-larg">Largura: </label
+            ><input type="number" name="orc-larg" id="orc-larg" />
+            <label for="orc-alt">Altura: </label
+            ><input type="number" name="orc-alt" id="orc-alt" />
+            <label for="orc-add">Adicional: </label
+            ><input type="number" name="orc-add" id="orc-add" />
+            <label for="orc-fator">Fator: </label
+            ><input type="number" name="orc-fator" id="orc-fator" />
+            <label for="orc-jogos">Jogos: </label
+            ><input type="number" name="orc-jogos" id="orc-jogos" />
+            <input type="button" value="Enviar" id="orc-enviar" />
+          </div>
+          <div>
+            <label for="orc-valor">Valor Adicional: </label
+            ><input type="number" name="orc-valor" id="orc-valor" />
+            <input type="button" value="Enviar" id="orc-enviar2" />
+          </div>
+          <div id="container-array"><!--INFOPROARRAY--></div>
+          <div>
+            <input type="button" value="Finalizar" id="orc-finalizar" />
+            <input type="button" value="Excluir Último" id="orc-finalizar" />
+            <input type="button" value="Excluir Tudo" id="orc-finalizar" />
+          </div>
+          <div><!--RESULTADO--></div>
+        </article>
+      </section>
+      <div class="bg bg-02"><!--RESPIRO--></div>
+      <section>
+        <article>
+          <h1 class="title">Calculadora</h1>
+          <p>
+            Possui as quatro operações matemáticas básicas e é possivel resetar
+            os valores ou apenas apagar o último número digitado.
+          </p>
+        </article>
+      </section>
+      <div class="bg bg-03"><!--RESPIRO--></div>
+      <section>
+        <article>
+          <h1 class="title">Cilindro</h1>
+          <p>
+            Adicione a largura da embalagem e a medida do cilindro, o resultado
+            será a quantidade de repetições que cabem neste cilindro com a
+            largura ideal da embalagem.
+          </p>
+        </article>
+      </section>
     </main>
-    <footer><p>Desenvolvido por Denner Rubio, 2023. Acesse meu Github.</p></footer>
-</body>
+    <footer>
+      <p>Desenvolvido por Denner Rubio, 2023. Acesse meu Github.</p>
+    </footer>
+  </body>
 </html>
