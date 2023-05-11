@@ -297,3 +297,21 @@ footer p {
   color: var(--amarelo1);
   text-decoration: underline;
 }
+
+/* JS */
+
+.textoresultado {
+  font-family: "Merriweather", serif;
+  color: var(--preto);
+  padding: 1em;
+}
+
+.fundolaranja {
+  background-color: var(--amarelo1);
+  border-radius: 15px;
+}
+
+.fundovermelho {
+  background-color: var(--vermelho1);
+  border-radius: 15px;
+}
