@@ -314,6 +314,11 @@ footer p {
 
 /* JS */
 
+#textoarray {
+  padding: 1em 2em;
+  line-height: 2em;
+}
+
 .textoresultado {
   font-family: "Merriweather", serif;
   color: var(--preto);
@@ -331,14 +336,15 @@ footer p {
 }
 
 @media screen and (max-width: 500px) {
-
   #orc-botoes-final {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  #orc-finalizar, #orc-del, #orc-del-last {
+  #orc-finalizar,
+  #orc-del,
+  #orc-del-last {
     width: 60%;
   }
 }

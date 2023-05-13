@@ -25,9 +25,9 @@
       </div>
     </header>
     <main>
-      <section>
+      <section id="title1">
         <article>
-          <h1 class="title" id="title1">Orçamento</h1>
+          <h1 class="title" >Orçamento</h1>
           <p class="title---subtext">
             Adicione os valores de largura e altura do serviço, um valor extra a
             ser adicionado na largura e altura (que pode ser zero caso não
@@ -37,35 +37,35 @@
           </p>
           <div class="container-inputs">
             <label for="orc-larg">Largura: </label
-            ><input type="number" name="orc-larg" id="orc-larg" />
+            ><input type="number" name="orc-larg" id="orc-larg" placeholder="0"/>
             <label for="orc-alt">Altura: </label
-            ><input type="number" name="orc-alt" id="orc-alt" />
-            <label for="orc-add">Extra: </label
-            ><input type="number" name="orc-add" id="orc-add" />
+            ><input type="number" name="orc-alt" id="orc-alt" placeholder="0"/>
+            <label for="orc-add">Extra (Adicional): </label
+            ><input type="number" name="orc-add" id="orc-add" placeholder="0"/>
             <label for="orc-fator">Fator: </label
-            ><input type="number" name="orc-fator" id="orc-fator" />
+            ><input type="number" name="orc-fator" id="orc-fator" placeholder="0,00"/>
             <label for="orc-jogos">Jogos: </label
-            ><input type="number" name="orc-jogos" id="orc-jogos" />
+            ><input type="number" name="orc-jogos" id="orc-jogos" placeholder="0"/>
             <input type="button" value="Enviar" id="orc-enviar" />
           </div>
           <div class="container-inputs">
             <label for="orc-valor">Valor Adicional: </label
-            ><input type="number" name="orc-valor" id="orc-valor" />
+            ><input type="number" name="orc-valor" id="orc-valor" placeholder="0"/>
             <input type="button" value="Enviar" id="orc-enviar2" />
           </div>
-          <div id="container-array"><!--INFOPROARRAY--></div>
+          <div id="container-array"><p id="textoarray"></p></div>
           <div id="orc-botoes-final">
             <input type="button" value="Finalizar" id="orc-finalizar" />
             <input type="button" value="Excluir Último" id="orc-del-last" />
             <input type="button" value="Excluir Tudo" id="orc-del" />
           </div>
-          <div><!--RESULTADO--></div>
+          <div id="cel-resultado2"><!--RESULTADO--></div>
         </article>
       </section>
       <div class="bg bg-02"><!--RESPIRO--></div>
-      <section>
+      <section id="title2">
         <article>
-          <h1 class="title" id="title2">Calculadora</h1>
+          <h1 class="title">Calculadora</h1>
           <p class="title---subtext">
             Possui as quatro operações matemáticas básicas e é possivel resetar
             os valores ou apenas apagar o último número digitado.
@@ -106,9 +106,9 @@
         </article>
       </section>
       <div class="bg bg-03"><!--RESPIRO--></div>
-      <section>
+      <section id="title3">
         <article>
-          <h1 class="title" id="title3">Cilindro</h1>
+          <h1 class="title">Cilindro</h1>
           <p class="title---subtext">
             Adicione a medida da embalagem e a medida do cilindro, o resultado
             será a quantidade de repetições que cabem neste cilindro com a
