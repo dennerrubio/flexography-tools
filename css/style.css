@@ -165,6 +165,11 @@ label {
   font-size: 0.7rem;
 }
 
+hr {
+  margin-top: .75em;
+  margin-bottom: 1.25em;
+}
+
 /* BOTÕES */
 
 #orc-enviar,
