@@ -4,6 +4,33 @@ const embalagem = document.querySelector("#cil-larg");
 const cilindro = document.querySelector("#cil-value");
 
 botao.addEventListener("click", function (e) {
+  resultCilindro();
+});
+
+function criarTexto(msg, cor) {
+  const texto = document.createElement("p");
+  texto.innerHTML = msg;
+  container.appendChild(texto);
+  if (cor === 1) {
+    container.classList.remove("fundovermelho");
+    container.classList.add("fundolaranja");
+  } else if (cor === 2) {
+    container.classList.remove("fundolaranja");
+    container.classList.add("fundovermelho");
+  }
+  texto.classList.add("textoresultado");
+}
+
+function calculo() {
+  const resultado = Number(cilindro.value) / Number(embalagem.value);
+  return Math.floor(resultado);
+}
+
+function calculoResto() {
+  return Number(cilindro.value) % Number(embalagem.value);
+}
+
+function resultCilindro() {
   container.innerHTML = "";
   if (embalagem.value === "" || cilindro.value === "") {
     criarTexto("ERRO: Por favor preencher todos os campos acima.", 2);
@@ -27,27 +54,14 @@ botao.addEventListener("click", function (e) {
       );
     }
   }
-});
+}
 
-function criarTexto(msg, cor) {
-  const texto = document.createElement("p");
-  texto.innerHTML = msg;
-  container.appendChild(texto);
-  if (cor === 1) {
-    container.classList.remove("fundovermelho");
-    container.classList.add("fundolaranja");
-  } else if (cor === 2) {
-    container.classList.remove("fundolaranja");
-    container.classList.add("fundovermelho");
+document.addEventListener("keyup", function (e) {
+  const embFoco = document.activeElement === embalagem;
+  const cilFoco = document.activeElement === cilindro;
+  if (e.key === "Enter") {
+    if (embFoco || cilFoco) {
+      resultCilindro();
+    }
   }
-  texto.classList.add("textoresultado");
-}
-
-function calculo() {
-  const resultado = cilindro.value / embalagem.value;
-  return Math.floor(resultado);
-}
-
-function calculoResto() {
-  return cilindro.value % embalagem.value;
-}
+});
