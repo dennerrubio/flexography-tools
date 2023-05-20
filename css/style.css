@@ -149,7 +149,7 @@ article {
   align-items: center;
 }
 
-input[type="number"] {
+input[type="number"], select {
   color: var(--pretointenso);
   width: 100%;
   max-width: 400px;
@@ -168,6 +168,14 @@ label {
 hr {
   margin-top: .75em;
   margin-bottom: 1.25em;
+}
+
+select {
+  display: block;
+}
+
+option {
+  color: var(--pretointenso);
 }
 
 /* BOTÕES */

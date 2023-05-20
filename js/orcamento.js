@@ -18,45 +18,26 @@ let arrayNum = [];
 let arrayTexto = [];
 
 enviar2.addEventListener("click", function (e) {
-  container2.innerHTML = "";
-  if (valor.value === "" || valor.value <= 0) {
-    criarTexto2("ERRO: Preencha o campo com algum valor maior que zero.", 2);
-  } else {
-    const valorAdd = Number(valor.value);
-    addValor(valorAdd);
-    valor.value = "";
-    valor.focus();
-  }
+  enviarOrc2();
 });
 
 enviar3.addEventListener("click", function (e) {
-  container2.innerHTML = "";
-  if (
-    largura.value === "" ||
-    largura.value <= 0 ||
-    altura.value === "" ||
-    altura.value <= 0 ||
-    adicional.value === "" ||
-    adicional.value < 0 ||
-    fator.value === "" ||
-    fator.value <= 0 ||
-    fator.value >= 1 ||
-    jogos.value === "" ||
-    jogos.value <= 0
-  ) {
-    criarTexto2(
-      `ERRO: <br> • Preencha todos os campos com algum valor maior que zero. <br> • O número de fator precisa estar entre 0.01 e 0.99. <br> • Caso não queira colocar um valor adicional, deixe o valor como zero.`,
-      2
-    );
-  } else {
-    const resultado = calculoOrcamento();
-    addValor(Number(resultado));
-    largura.value = "";
-    altura.value = "";
-    adicional.value = "";
-    fator.value = "";
-    jogos.value = "";
-    largura.focus();
+  enviarOrc1();
+});
+
+document.addEventListener("keyup", function (e) {
+  const larguraFoco = document.activeElement === largura;
+  const alturaFoco = document.activeElement === altura;
+  const extraFoco = document.activeElement === adicional;
+  const jogosFoco = document.activeElement === jogos;
+  const valorFoco = document.activeElement === valor;
+  if (e.key === "Enter") {
+    if (larguraFoco || alturaFoco || extraFoco || jogosFoco) {
+      enviarOrc1();
+    }
+    if (valorFoco) {
+      enviarOrc2();
+    }
   }
 });
 
@@ -87,6 +68,44 @@ finalizar.addEventListener("click", function (e) {
   }
 });
 
+function enviarOrc1() {
+  container2.innerHTML = "";
+  if (
+    largura.value === "" ||
+    largura.value <= 0 ||
+    altura.value === "" ||
+    altura.value <= 0 ||
+    adicional.value < 0 ||
+    jogos.value === "" ||
+    jogos.value <= 0
+  ) {
+    criarTexto2(
+      `ERRO: Preencha todos os campos com algum valor maior que zero.`,
+      2
+    );
+  } else {
+    const resultado = calculoOrcamento();
+    addValor(Number(resultado));
+    largura.value = "";
+    altura.value = "";
+    adicional.value = "";
+    jogos.value = "";
+    largura.focus();
+  }
+}
+
+function enviarOrc2() {
+  container2.innerHTML = "";
+  if (valor.value === "" || valor.value <= 0) {
+    criarTexto2("ERRO: Preencha o campo com algum valor maior que zero.", 2);
+  } else {
+    const valorAdd = Number(valor.value);
+    addValor(valorAdd);
+    valor.value = "";
+    valor.focus();
+  }
+}
+
 function criarTexto2(msg, cor) {
   const texto = document.createElement("p");
   texto.innerHTML = msg;
@@ -113,6 +132,9 @@ function showValor() {
 }
 
 function calculoOrcamento() {
+  if (!adicional) {
+    adicional.value = 0;
+  }
   const larg = Number(largura.value);
   const alt = Number(altura.value);
   const add = Number(adicional.value);

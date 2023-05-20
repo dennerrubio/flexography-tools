@@ -27,11 +27,10 @@
     <main>
       <section id="title1">
         <article>
-          <h1 class="title" >Orçamento</h1>
+          <h1 class="title">Orçamento</h1>
           <p class="title---subtext">
             Adicione os valores de largura e altura do serviço, um valor extra a
-            ser adicionado na largura e altura (que pode ser zero caso não
-            queira), o valor de fator e a quantidade de jogos desta peça. Ela
+            ser adicionado na largura e altura, o valor de fator e a quantidade de jogos desta peça. Ela
             será adicionada a lista, apenas todas as peças contabilizadas é só
             clicar para finalizar para obter o orçamento do serviço inteiro.
           </p>
@@ -40,15 +39,24 @@
             ><input type="number" name="orc-larg" id="orc-larg" />
             <label for="orc-alt">Altura: </label
             ><input type="number" name="orc-alt" id="orc-alt" />
-            <label for="orc-add">Extra: </label
+            <label for="orc-add">Extra (Opcional): </label
             ><input type="number" name="orc-add" id="orc-add" />
-            <label for="orc-fator">Fator: </label
-            ><input type="number" name="orc-fator" id="orc-fator" />
+            <label for="orc-fator">Fator:</label>
+            <select name="orc-fator" id="orc-fator">
+              <option value="0.10">0,10</option>
+              <option value="0.11">0,11</option>
+              <option value="0.12">0,12</option>
+              <option value="0.13">0,13</option>
+              <option value="0.14" selected="selected">0,14</option>
+              <option value="0.15">0,15</option>
+              <option value="0.16">0,16</option>
+              <option value="0.17">0,17</option>
+            </select>
             <label for="orc-jogos">Jogos: </label
             ><input type="number" name="orc-jogos" id="orc-jogos" />
             <input type="button" value="Enviar" id="orc-enviar" />
           </div>
-          <hr>
+          <hr />
           <div class="container-inputs">
             <label for="orc-valor">Valor Adicional: </label
             ><input type="number" name="orc-valor" id="orc-valor" />
@@ -72,36 +80,41 @@
             os valores ou apenas apagar o último número digitado.
           </p>
           <div id="calculadora">
-            <input type="text" name="calc-res" id="calc-res"  readonly="readonly">
+            <input
+              type="text"
+              name="calc-res"
+              id="calc-res"
+              readonly="readonly"
+            />
             <div class="calc-row">
-              <input type="button" value="C" class="calc-clear">
-              <input type="button" value="(" class="calc-num">
-              <input type="button" value=")" class="calc-num">
-              <input type="button" value="/" class="calc-num">
+              <input type="button" value="C" class="calc-clear" />
+              <input type="button" value="(" class="calc-num" />
+              <input type="button" value=")" class="calc-num" />
+              <input type="button" value="/" class="calc-num" />
             </div>
             <div class="calc-row">
-              <input type="button" value="7" class="calc-num">
-              <input type="button" value="8" class="calc-num">
-              <input type="button" value="9" class="calc-num">
-              <input type="button" value="*" class="calc-num">
+              <input type="button" value="7" class="calc-num" />
+              <input type="button" value="8" class="calc-num" />
+              <input type="button" value="9" class="calc-num" />
+              <input type="button" value="*" class="calc-num" />
             </div>
             <div class="calc-row">
-              <input type="button" value="4" class="calc-num">
-              <input type="button" value="5" class="calc-num">
-              <input type="button" value="6" class="calc-num">
-              <input type="button" value="-" class="calc-num">
+              <input type="button" value="4" class="calc-num" />
+              <input type="button" value="5" class="calc-num" />
+              <input type="button" value="6" class="calc-num" />
+              <input type="button" value="-" class="calc-num" />
             </div>
             <div class="calc-row">
-              <input type="button" value="1" class="calc-num">
-              <input type="button" value="2" class="calc-num">
-              <input type="button" value="3" class="calc-num">
-              <input type="button" value="+" class="calc-num">
+              <input type="button" value="1" class="calc-num" />
+              <input type="button" value="2" class="calc-num" />
+              <input type="button" value="3" class="calc-num" />
+              <input type="button" value="+" class="calc-num" />
             </div>
             <div class="calc-row">
-              <input type="button" value="." class="calc-num">
-              <input type="button" value="0" class="calc-num">
-              <input type="button" value="<" class="calc-erase">
-              <input type="button" value="=" class="calc-eq">
+              <input type="button" value="." class="calc-num" />
+              <input type="button" value="0" class="calc-num" />
+              <input type="button" value="<" class="calc-erase" />
+              <input type="button" value="=" class="calc-eq" />
             </div>
           </div>
         </article>
@@ -127,7 +140,15 @@
       </section>
     </main>
     <footer>
-      <p>Desenvolvido por Denner Rubio, 2023. <a href="https://github.com/dennerrubio" target="_blank" id="footer-link">Acesse meu Github.</a></p>
+      <p>
+        Desenvolvido por Denner Rubio, 2023.
+        <a
+          href="https://github.com/dennerrubio"
+          target="_blank"
+          id="footer-link"
+          >Acesse meu Github.</a
+        >
+      </p>
     </footer>
     <script src="js/orcamento.js"></script>
     <script src="js/calculadora.js"></script>

@@ -4,6 +4,7 @@ document.addEventListener("click", function (e) {
 
   if (el.className === "calc-num") {
     addDisplay(el.value);
+    display.focus();
   }
 
   if (el.className === "calc-clear") {
@@ -15,12 +16,25 @@ document.addEventListener("click", function (e) {
   }
 
   if (el.className === "calc-eq") {
-    let calculo = eval(display.value);
-    display.value = calculo;
+    resultado();
   }
-  
 });
 
 function addDisplay(msg) {
   return (display.value += msg);
 }
+
+function resultado() {
+  let calculo = eval(display.value);
+  display.value = calculo;
+}
+
+document.addEventListener("keyup", function (e) {
+  const displayFoco = document.activeElement === display;
+
+  if (e.key === "Enter") {
+    if (displayFoco) {
+      resultado();
+    }
+  }
+});
