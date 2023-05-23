@@ -34,9 +34,11 @@ document.addEventListener("keyup", function (e) {
   if (e.key === "Enter") {
     if (larguraFoco || alturaFoco || extraFoco || jogosFoco) {
       enviarOrc1();
+      largura.focus();
     }
     if (valorFoco) {
       enviarOrc2();
+      valor.focus();
     }
   }
 });
@@ -69,6 +71,7 @@ finalizar.addEventListener("click", function (e) {
 });
 
 function enviarOrc1() {
+  console.log("play");
   container2.innerHTML = "";
   if (
     largura.value === "" ||
@@ -90,7 +93,6 @@ function enviarOrc1() {
     altura.value = "";
     adicional.value = "";
     jogos.value = "";
-    largura.focus();
   }
 }
 
@@ -102,7 +104,6 @@ function enviarOrc2() {
     const valorAdd = Number(valor.value);
     addValor(valorAdd);
     valor.value = "";
-    valor.focus();
   }
 }
 
